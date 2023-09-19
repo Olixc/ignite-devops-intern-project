@@ -12,6 +12,7 @@ This repository showcases the Ignite DevOps Intern Project, demonstrating the se
   - [Prerequisites](#prerequisites)
   - [Getting Started](#getting-started)
     - [Cluster Setup](#cluster-setup)
+    - [Node.js Application Deployment](#nodejs-application-deployment)
   - [Project Structure](#project-structure)
 
 ## Prerequisites
@@ -32,6 +33,10 @@ Before you begin, ensure you have the following prerequisites installed:
 
    ```./cluster```
 2. Download the kubeconfig for the cluster and securely store it for later use.
+
+### Node.js Application Deployment
+
+1. Deploy a sample Node.js application to the cluster using Terraform.
 
 ## Project Structure
 
