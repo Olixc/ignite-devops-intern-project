@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-webapp-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: node-webapp
+  template:
+    metadata:
+      labels:
+        app: node-webapp
+    spec:
+      containers:
+        - name: node-webapp-container
+          image: olixc/node-webapp:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: NODE_ENV
+              value: production
+          resources:
+            limits:
+              memory: "256Mi" # Specify your memory limit
+              cpu: "0.5" # Specify your CPU limit
+            requests:
+              memory: "128Mi" # Specify your memory request
+              cpu: "0.25" # Specify your CPU request
